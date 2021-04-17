@@ -7,16 +7,16 @@ pipeline {
         stage('Build') {
             parallel {
                 stage('Building server') {
-                    dir('backend') {
-                        steps {
+                    steps  {
+                        dir('backend') {
                             sh 'npm install'
                         }
                     }
                 }
 
                 stage('Building client') {
-                    dir('frontend') {
-                        steps {
+                    steps  {
+                        dir('frontend') {
                             sh 'npm install'
                         }
                     }
